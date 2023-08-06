@@ -20,7 +20,7 @@ title                    : "코딩아 재윤해"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Kim Jaeyun"
-description              : "for spend quality time"
+description              : "I write to pass the quality time ⭐"
 url                      : "https://jaeyumn.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Kim Jaeyun"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I write to pass the quality time."
+  bio              : "I write to pass the quality time ⭐"
   location         : "Republic of Korea"
   email            :
   links:
