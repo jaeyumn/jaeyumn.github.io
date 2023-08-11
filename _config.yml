@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Kim Jaeyun"
-  avatar           : "/assets/KakaoTalk_20230514_220549877.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/img/KakaoTalk_20230514_220549877.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I write to spend some quality time⭐"
   location         : "South Korea"
   email            :
