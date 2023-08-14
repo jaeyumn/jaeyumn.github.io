@@ -25,15 +25,18 @@ Action: Identify and stop the process that's listening on port 8080 or configure
 
 1. 관리자 권한으로 cmd 실행
 2. netstat -p tcp -ano 를 입력하면 아래와 같이 8080 port가 사용중이라고 나온다.
+
 ```
 > netstat -p tcp -ano
 
 프로토콜    로컬 주소        외부 주소      상태          PID
 TCP       0.0.0.0.:8080    0.0.0.0:0    LISTENING      16068  
 ```
+
 <br>
 
 3. 위의 PID를 참고하여 taskkill /f /pid {PID} 값을 입력하면 된다.
+
 ```
 > taskkill /f /pid 16068
 
