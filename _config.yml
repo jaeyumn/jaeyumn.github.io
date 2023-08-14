@@ -290,8 +290,8 @@ defaults:
       layout: single
       author_profile: true
       read_time: false  # 읽는 데 걸리는 소요 시간
-      show_data: true # 포스팅 날짜
-      comments: true
+      show_date: true # 포스팅 날짜
+      comments: #true
       share: true
       related: true
   # _pages 
