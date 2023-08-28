@@ -7,10 +7,16 @@ title: "String concatenation as argument to 'StringBuilder.append()' call"
 StringBuilder sb = new StringBuilder();
 sb.append(index + "\n");
 ```
-인텔리제이로 알고리즘 문제를 풀던 도중 index 라는 변수를 줄 별로 출력하기 위해 다음과 같이 코드를 작성하니까 'append'에 노란 밑줄이 생겼다.![](https://velog.velcdn.com/images/jaeyumn/post/8d27c924-6913-4de3-8a50-f52fb1345f3e/image.png)
+인텔리제이로 알고리즘 문제를 풀던 도중 index 라는 변수를 줄 별로 출력하기 위해 다음과 같이 코드를 작성하니까 'append'에 노란 밑줄이 생겼다.
 
+<br/>
+
+```text
+String concatenation as argument to 'StringBuilder.append()' call
+```
 
 그리고 다음과 같이 친절하게 교체할 것을 권장하면서 이유를 말해줬다.
+
 ```java
 sb.append(index).append("\n");
 ```
@@ -49,7 +55,17 @@ sb.append(index + "\n") 을 작성했을 때는 교체를 권장하는 문구가
 
 </br>
 
-<img src="https://velog.velcdn.com/images/jaeyumn/post/0c06e7b0-babb-408c-843b-4401fe3f5f09/image.png" width=70%>
+```java
+StringBuilder sb = new StringBuilder();
+
+sb.append(1 + '\n');
+sb.append(2 + '\n');
+sb.append("builder" + '\n');
+sb.append(3 + '\n' + "\n");
+sb.append(4 + '\n');
+
+System.out.println(sb);
+```
 
 처음 문제가 발생했던 코드에서 index 변수의 타입은 int 였다.
 
@@ -67,6 +83,12 @@ sb.append(1 + '\n') 에서 1은 정수형으로 처리되고 '\n' 은 문자 그
 
 </br>
 
+```
+<ASCII Code>
+10진: 10
+16진: 0x0A
+문자: LF (\n, New Line)
+```
 <img src ="https://velog.velcdn.com/images/jaeyumn/post/b8b22242-2491-47d3-b3e6-da50019b1fcc/image.png" width=50%>
 
 LF는 줄 바꿈 (Line Feed) 문자를 나타내는 용어이고 해당 문자에는 숫자 10이 할당되어 있다.
