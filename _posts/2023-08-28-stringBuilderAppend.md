@@ -21,7 +21,7 @@ String concatenation as argument to 'StringBuilder.append()' call
 sb.append(index).append("\n");
 ```
 
-</br>
+<br/>
 
 두 코드는 사실 동일한 결과를 만들어준다.
 
@@ -35,7 +35,7 @@ sb.append(index + "\n"); 는 index 와 "\n"을 연결한 후에 그 결과를 St
 
 하지만 개발을 공부하는 데 있어서 항상 극한의 상황을 고려하라는 글을 많이 봤고 동의하기 때문에, 나는 미미한 성능의 이점이라도 챙기기 위해 아래 방법을 사용하고자 한다.
 
-</br>
+<br/>
 
 ### 추가로 궁금했던 부분
 
@@ -47,13 +47,13 @@ sb.append(index + "\n") 을 작성했을 때는 교체를 권장하는 문구가
 
 여기서 궁금한 점은 둘 다 임시 문자열을 만들어서 중간 결과를 만들어내고 StringBuilder에 추가되는 것일 텐데 왜 인텔리제이는 이 둘을 차별(?) 하는 것인지 잘 모르겠다.
 
-</br>
+<br/>
 
 ### 궁금했던 부분 해결!
 
 아주 간단한 이유였다. 여러 실험을 하던 도중 진짜 생각지도 못한 곳에서 이유를 찾게 되었다.
 
-</br>
+<br/>
 
 ```java
 StringBuilder sb = new StringBuilder();
@@ -81,7 +81,7 @@ sb.append(1 + '\n') 에서 1은 정수형으로 처리되고 '\n' 은 문자 그
 
 즉, 마지막 출력에서 sb.append(4 + '\n')이 14로 출력되는 이유는 '\n' 이 줄 바꿈 문자를 의미하며, 아스키코드에서 10에 해당하기 때문에 4 + 10 으로 14가 출력되는 것이다.
 
-</br>
+<br/>
 
 ```
 <ASCII Code>
@@ -89,6 +89,5 @@ sb.append(1 + '\n') 에서 1은 정수형으로 처리되고 '\n' 은 문자 그
 16진: 0x0A
 문자: LF (\n, New Line)
 ```
-<img src ="https://velog.velcdn.com/images/jaeyumn/post/b8b22242-2491-47d3-b3e6-da50019b1fcc/image.png" width=50%>
 
 LF는 줄 바꿈 (Line Feed) 문자를 나타내는 용어이고 해당 문자에는 숫자 10이 할당되어 있다.
