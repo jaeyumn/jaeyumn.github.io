@@ -21,7 +21,8 @@ Action: Identify and stop the process that's listening on port 8080 or configure
 
 <br>
 
-### 해결 방법 (Windows OS)<hr>
+### 해결 방법 (Windows OS)
+---
 
 1. 관리자 권한으로 cmd 실행<br>
 
@@ -46,8 +47,8 @@ TCP       0.0.0.0.:8080    0.0.0.0:0    LISTENING      16068
 
 <br>
 
-### 추가 
-<hr/>
+### 추가
+---
 EC2 환경에서 백그라운드로 서버를 실행시켰을 때 종료 방법 (bash)
 
 1. 프로세스 id 확인: sudo lsof -t -i:[포트 번호]
