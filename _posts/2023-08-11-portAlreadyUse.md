@@ -24,11 +24,11 @@ Action: Identify and stop the process that's listening on port 8080 or configure
 ### 해결 방법 (Windows OS)
 ---
 
-1. 관리자 권한으로 cmd 실행<br>
+1. 관리자 권한으로 `cmd` 실행<br>
 
-2. netstat -p tcp -ano 를 입력하면 아래와 같이 8080 port가 사용중이라고 나온다.<br>
+2. `netstat -p tcp -ano` 를 입력하면 아래와 같이 8080 port가 사용중이라고 나온다.<br>
 
-3. PID를 참고하여 taskkill /f /pid {PID} 값을 입력하면 된다.
+3. `PID`를 참고하여 `taskkill /f /pid {PID}` 값을 입력하면 된다.
 
 <br>
 
@@ -51,5 +51,5 @@ TCP       0.0.0.0.:8080    0.0.0.0:0    LISTENING      16068
 ---
 EC2 환경에서 백그라운드로 서버를 실행시켰을 때 종료 방법 (bash)
 
-1. 프로세스 id 확인: sudo lsof -t -i:[포트 번호]
-2. 프로세스 종료 : kill -9 [프로세스 id]
+1. 프로세스 id 확인: `sudo lsof -t -i:[포트 번호]`
+2. 프로세스 종료 : `kill -9 [프로세스 id]`

@@ -39,7 +39,7 @@ public static class Add {
 
 구글링을 통해 해결 방법을 찾아보고 GPT 형님의 도움도 받아봤지만 해결이 되지 않아서 Builder를 통해 손수 변환을 해야 하나.. 고민하던 찰나 '이런 문제가 생기면 mapstruct를 사용하는 모두가 손수 변환을 해주는 건가? mapstruct를 활용해서 해결할 수 있는 방법이 있지 않을까?'라는 생각이 들어 새로운 방향으로 접근해 보고 해결 방법을 알게 되었다.
 
-바로 @Mapper 애너테이션에 uses를 적용해서 해당 mapper에서 다른 mapper를 활용하는 것이다. 그럼 Builder로 일일이 변환 작업을 해줄 필요 없이 자동으로 변환될 것이다.
+바로 `@Mapper` 애너테이션에 `uses`를 적용해서 해당 mapper에서 다른 mapper를 활용하는 것이다. 그럼 Builder로 일일이 변환 작업을 해줄 필요 없이 자동으로 변환될 것이다.
 
 다음과 같이 변환에 필요한 Mapper 들을 모두 적용시켜 주니까 정상적으로 동작했다.
 
@@ -69,7 +69,7 @@ public interface CustomSectionMapper {
 
 <br>
 
-전에는 무턱대로 @Mapper(componentModel = "spring")만 설정하고 변환했지만 여러 문제가 발생할 수 있다는 것을 인지했다.
+전에는 무턱대로 `@Mapper(componentModel = "spring")`만 설정하고 변환했지만 여러 문제가 발생할 수 있다는 것을 인지했다.
 
 <br>
 
