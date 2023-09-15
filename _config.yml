@@ -20,7 +20,7 @@ title                    : "코딩아 재윤해"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Kim Jaeyun"
-description              : "⭐ <br/> I write to spend some quality time"
+description              : "⭐ <br/> 시간을 가치있게"
 url                      : "https://jaeyumn.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Kim Jaeyun"
   avatar           : "/assets/img/KakaoTalk_20230514_220549877.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "⭐ <br/> I write to spend some quality time"
+  bio              : "⭐ <br/> 시간을 가치있게"
   location         : "South Korea"
   email            :
   links:
