@@ -1,6 +1,7 @@
 ---
-layout: single
 title: "Port 8080 was already in use"
+categories:
+    - error
 ---
 
 작업을 하다가 인텔리제이가 갑자기 닫혀버리거나 서버를 종료하지 못한 경우에 다시 서버를 실행시키면 에러가 발생한다.
