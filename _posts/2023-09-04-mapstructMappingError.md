@@ -1,6 +1,8 @@
 ---
-layout: single
 title: "Mapstruct 클래스타입 변환 / N:M 관계 매핑 에러"
+categories:
+    - spring
+    - error
 ---
 
 ### 문제 발생

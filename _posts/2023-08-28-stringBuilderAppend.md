@@ -1,6 +1,7 @@
 ---
-layout: single
 title: "String concatenation as argument to 'StringBuilder.append()' call"
+categories:
+    - java
 ---
 
 ```java

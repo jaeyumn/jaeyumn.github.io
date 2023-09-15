@@ -1,6 +1,7 @@
 ---
-layout: single
 title: "BufferedReader close() 사용 이유에 대해"
+categories:
+    - java
 ---
 
 알고리즘 문제를 풀면서 문득 생긴 궁금증이 있었다.
