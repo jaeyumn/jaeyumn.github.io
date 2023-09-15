@@ -11,11 +11,14 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
 sidebar-category:
-  - title: "카테고리"
+  - title: "💻개발일지"
     children:
-      - title: "블로그"
-        url: "/blog"
-      - title: "카테고리B"
-        url:  "/CategoryB"
-      - title: "카테고리C"
-        url:  "/CategoryC"
+      - title: "Java"
+        url: "/java"
+        category: "java"
+      - title: "Spring"
+        url: "/spring"
+        category: "spring"
+      - title: "etc"
+        url: "/etc"
+        category: "etc"
