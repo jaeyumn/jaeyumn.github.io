@@ -5,10 +5,10 @@ categories:
     - error
 ---
 
+Mapstruct는 Builder를 통해 손수 객체 간 변환을 할 필요 없이 간단하게 변환을 적용해 주는 라이브러리이다.
+
 ### 문제 발생
 ---
-
-Mapstruct는 Builder를 통해 손수 객체 간 변환을 할 필요 없이 간단하게 변환을 적용해 주는 라이브러리이다.
 
 평소 코드를 작성하면서 Dto 와 Entity 간에 변환이 필요할 때면 mapstruct를 이용해서 작업을 진행했고 이번에도 mapstrurct를 통해 매핑을 하는데 에러가 발생했다.
 
