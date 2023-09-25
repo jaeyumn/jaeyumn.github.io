@@ -1,5 +1,5 @@
 ---
-title: "error"
+title: "Error Log"
 layout: archive
 permalink: /error-log
 author_profile: true
