@@ -47,7 +47,7 @@ npm ERR! A complete log of this run can be found in: C:\Users\wkdrn\AppData\Loca
 
 <br>
 
-### 해결 과정
+### 해결
 ---
 
 위의 메시지에서는 여러 해결 방안을 제시해준다.
@@ -61,3 +61,17 @@ npm ERR! A complete log of this run can be found in: C:\Users\wkdrn\AppData\Loca
 --legacy-peer-deps 명령어는 어떠한 알고리즘을 사용하여 종속성 충돌을 해결해준다고 한다. 나는 이 방식으로 문제를 해결했다.
 
 다음에 동일한 문제가 발생하면 의존성 및 버전 관리에 주의하면서 문제를 해결해야겠다.
+
+<br>
+
+---
+
+--force 옵션 명령어
+```
+npm install @material-ui/core @material-ui/icons --force
+```
+
+--legacy-peer-deps 옵션 명령어
+```
+npm install @material-ui/core @material-ui/icons --legacy-peer-deps
+```
