@@ -1,7 +1,7 @@
 ---
 title: "CS"
 layout: archive
-permalink: /cs
+permalink: /computer-science
 author_profile: true
 sidebar:
     nav: "sidebar-category"

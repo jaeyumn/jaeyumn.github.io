@@ -1,5 +1,5 @@
 ---
-title: "String concatenation as argument to 'StringBuilder.append()' call"
+title: "[Java] String concatenation as argument to 'StringBuilder.append()' call"
 categories:
     - java
 ---

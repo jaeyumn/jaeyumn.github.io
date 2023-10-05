@@ -1,5 +1,5 @@
 ---
-title: "Queue 자료구조에서 add와 offer의 차이"
+title: "[Java] Queue 자료구조에서 add와 offer의 차이"
 categories:
     - java
 ---

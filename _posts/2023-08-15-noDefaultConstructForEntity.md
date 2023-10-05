@@ -1,5 +1,5 @@
 ---
-title: "No default constructor for entity"
+title: "[JPA] No default constructor for entity"
 categories:
     - spring
 ---

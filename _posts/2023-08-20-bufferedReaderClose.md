@@ -1,5 +1,5 @@
 ---
-title: "BufferedReader close() 사용 이유에 대해"
+title: "[Java] BufferedReader close() 사용 이유에 대해"
 categories:
     - java
 ---
