@@ -1,5 +1,5 @@
 ---
-title: "serialVersionUID 에 대해"
+title: "[Java] serialVersionUID 에 대해"
 categories:
     - java
 ---

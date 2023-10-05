@@ -1,5 +1,5 @@
 ---
-title: "React @material-ui 설치 에러"
+title: "[React] @material-ui 설치 에러"
 categories:
     - react
     - error

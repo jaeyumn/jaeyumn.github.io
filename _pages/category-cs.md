@@ -1,5 +1,5 @@
 ---
-title: "CS"
+title: "Computer Science"
 layout: archive
 permalink: /computer-science
 author_profile: true

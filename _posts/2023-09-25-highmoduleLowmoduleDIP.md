@@ -1,5 +1,5 @@
 ---
-title: "DIP에 나오는 저수준 모듈 / 고수준 모듈의 의미"
+title: "[Java] DIP에 나오는 저수준 모듈 / 고수준 모듈의 의미"
 categories:
     - java
 ---
