@@ -1,7 +1,7 @@
 ---
 title: "[Web] REST API 의 GET 요청에는 Request Body를 넣을 수 있을까?"
 categories:
-    - development
+    - develop
     - spring
 ---
 

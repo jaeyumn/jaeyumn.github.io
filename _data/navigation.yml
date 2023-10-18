@@ -27,7 +27,7 @@ sidebar-category:
         category: "db"
       - title: "- Develop"
         url: "/development"
-        category: "development"
+        category: "develop"
       - title: "- Error Log"
         url: "/error-log"
         category: "error"
