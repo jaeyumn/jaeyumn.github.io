@@ -1,11 +1,11 @@
 ---
-title: "Computer Science"
+title: "Development"
 layout: archive
-permalink: /computer-science
+permalink: /development
 author_profile: true
 sidebar:
     nav: "sidebar-category"
 ---
 
-{% assign posts = site.categories.cs %}
+{% assign posts = site.categories.development %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
