@@ -151,7 +151,7 @@ BUILD FAILED in 7s
 
 - **정상적으로 수행 되었을 때**
 
-```java
+```
 PS C:\Users\wkdrn\..dev\querydsl> ./gradlew clean compileQuerydsl
 
 Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
@@ -162,7 +162,6 @@ For more on this, please refer to https://docs.gradle.org/8.3/userguide/command_
 
 BUILD SUCCESSFUL in 4s
 4 actionable tasks: 4 executed
-
 ```
 
 
