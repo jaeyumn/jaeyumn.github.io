@@ -17,7 +17,7 @@ categories:
 ### build.gradle
 ---
 
-```java
+```gradle
 buildscript {
 	ext {
 		queryDslVersion = "5.0.0"
@@ -95,13 +95,13 @@ configurations {
 ---
 
 쌍따옴표로 감싸진 부분은 쌍따옴표 그대로 작성해야 한다. 만약 다음과 같이 작성하면 아래 처럼 Build에 실패함.
-```java
+```gradle
 // queryDsl
 	implementation 'com.querydsl:querydsl-jpa:${queryDslVersion}'
 	implementation 'com.querydsl:querydsl-apt:${queryDslVersion}'
 ```
 
-```
+```bash
 PS C:\Users\wkdrn\..dev\querydsl> ./gradlew clean compileQuerydsl
 
 Welcome to Gradle 8.3!
@@ -151,7 +151,7 @@ BUILD FAILED in 7s
 
 - **정상적으로 수행 되었을 때**
 
-```
+```bash
 PS C:\Users\wkdrn\..dev\querydsl> ./gradlew clean compileQuerydsl
 
 Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
@@ -171,22 +171,22 @@ BUILD SUCCESSFUL in 4s
 ---
 
 - QueryDSL 라이브러리  
-```java
+```gradle
 implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
 ```
 
 - QueryDSL 관련 코드 생성
-```java
+```gradle
 annotationProcessor "com.querydsl:querydsl-apt:${queryDslVersion}"
 ```
 
 - QueryDSL 생성된 클래스 파일을 저장할 디렉토리 경로 설정
-```java
+```gradle
 def querydslDir = "$buildDir/generated/querydsl"
 ```
 
 - QueryDSL 플러그인을 구성하는 블록
-```java
+```gradle
 querydsl {
 	jpa = true  // JPA 엔티티 클래스를 기반으로 QueryDSL 클래스 생성
 	querydslSourcesDir = querydslDir  // 생성된 QueryDSL 클래스 파일들을 'querydslDir' 디렉토리에 저장
@@ -194,21 +194,21 @@ querydsl {
 ```
 
 - QueryDSL이 생성한 클래스 파일들을 프로젝트의 소스 세트에 추가하여 컴파일할 수 있도록 지정
-```java
+```gradle
 sourceSets {
 	main.java.srcDir querydslDir
 }
 ```
 
 - QueryDSL 컴파일 작업을 구성하는 블록
-```java
+```gradle
 compileQuerydsl {
 	options.annotationProcessorPath = configurations.querydsl
 } // QueryDSL의 annotation processor를 clathpath에 추가하여 컴파일 시 annotation processing을 수행
 ```
 
 - Gradle의 configurations를 구성하는 블록
-```java
+```gradle
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor // 'compileOnly' 구성을 'annotationProcessor' 구성을 확장하도록 지정 -> 컴파일 시 annotationProcessor를 사용할 수 있도록 설정
