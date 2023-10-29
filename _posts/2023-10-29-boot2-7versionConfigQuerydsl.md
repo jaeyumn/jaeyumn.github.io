@@ -7,8 +7,9 @@ categories:
 ### 개발 환경
 ---
 
-- intelliJ Ultimate
+- intelliJ
 - SpringBoot 2.7.17
+- QueryDSL 5.0.0
 - Gradle
 
 <br>
