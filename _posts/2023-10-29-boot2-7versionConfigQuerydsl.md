@@ -20,7 +20,7 @@ categories:
 ```gradle
 buildscript {
 	ext {
-		queryDslVersion = "5.0.0"
+		queryDslVersion = '5.0.0'
 	}
 }
 
@@ -28,7 +28,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.17'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
+	id "com.ewerk.gradle.plugins.querydsl" version '1.0.10'
 }
 
 group = 'com'
@@ -94,7 +94,7 @@ configurations {
 ### **여기서 주의할 점**
 ---
 
-쌍따옴표로 감싸진 부분은 쌍따옴표 그대로 작성해야 한다. 만약 다음과 같이 작성하면 아래 처럼 Build에 실패함.
+쌍따옴표로 감싸진 부분은 변수를 사용해야 하기 때문에 쌍따옴표 그대로 작성해야 한다. 만약 다음과 같이 작성하면 아래 처럼 Build에 실패함.
 ```gradle
 // queryDsl
 	implementation 'com.querydsl:querydsl-jpa:${queryDslVersion}'
