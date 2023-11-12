@@ -125,6 +125,12 @@ public ResponseEntity<CommonResponse<Void>> reissueToken(HttpServletRequest requ
 <br>
 
 ```java
+public Tokens reissue(String refreshToken) {
+    return jwtManager.reissueTokens(refreshToken);
+}
+```
+
+```java
 @Override
 public Tokens reissueTokens(String refreshTokenValue) {
     if (!validate(refreshTokenValue)) {
