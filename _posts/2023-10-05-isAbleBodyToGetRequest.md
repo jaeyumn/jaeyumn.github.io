@@ -1,8 +1,8 @@
 ---
 title: "[Web] REST API 의 GET 요청에는 Request Body를 넣을 수 있을까?"
 categories:
-    - develop
-    - spring
+  - web
+  - spring
 ---
 
 REST API의 GET 요청은 서버로부터 리소스를 조회하거나 검색하기 위해 사용되며, 보통은 요청 매개변수(query parameters)를 사용해서 필요한 데이터를 전달하거나 URL 경로의 특정 부분에 `/{id}`와 같이 변수를 넣어서 사용한다.
@@ -16,6 +16,7 @@ REST API의 GET 요청은 서버로부터 리소스를 조회하거나 검색하
 <br>
 
 ### 권장하지 않는 이유
+
 ---
 
 GET 요청에 Request Body를 넣는 것이 권장되지 않는 이유는 다음과 같다.

@@ -1,7 +1,7 @@
 ---
 title: "[Spring] Bean 생명주기 콜백"
 categories:
-    - spring
+  - spring
 ---
 
 스프링 프레임워크는 객체의 생성과 소멸 시점을 관리하고 제어할 수 있는 `Bean 생명주기` 기능을 제공한다.
@@ -13,6 +13,7 @@ categories:
 <br>
 
 ### Bean 생명주기 순서
+
 ---
 
 스프링에서 빈의 생명주기는 다음과 같은 순서로 진행된다.
@@ -28,6 +29,7 @@ categories:
 <br>
 
 ### 1. InitializingBean 및 DisposableBean 인터페이스 사용
+
 ---
 
 인터페이스를 구현하는 방법은 스프링에서 제공하는 표준 인터페이스를 사용하기 때문에 구현이 간단하고 빠르게 설정할 수 있다.
@@ -36,7 +38,6 @@ categories:
 
 - `InitializingBean` 인터페이스를 구현한 빈은 `afterPropertiesSet()` 메서드를 오버라이드해서 초기화 로직을 구현한다.
 - `DisposableBean` 인터페이스를 구현한 빈은 `destroy()` 메서드를 오버라이드해서 소멸 로직을 구현한다.
-
 
 ```java
 public class testBean implements InitializingBean, DisposableBean {
@@ -58,6 +59,7 @@ public class testBean implements InitializingBean, DisposableBean {
 <br>
 
 ### 2. 설정 정보에 지정
+
 ---
 
 빈 클래스 내부에서 사용자 정의 초기화 및 소멸 메서드를 정의할 수 있다.
@@ -92,6 +94,7 @@ public class testBean {
 <br>
 
 ### 3. @PostConstruct 및 @PreDestroy 애너테이션 사용
+
 ---
 
 빈 클래스에 애너테이션만 추가하면 되므로 코드가 깔끔하고 가독성이 좋다. 또한 스프링 컨테이너에서 초기화 및 소멸 메서드를 찾아 자동으로 호출해주므로 빈 클래스 자체를 수정하지 않고도 빈의 생명주기를 제어할 수 있다.
@@ -121,6 +124,7 @@ public class testBean {
 <br>
 
 ### 정리
+
 ---
 
 각 방법은 상황에 따라 적절하게 선택할 수 있고, 개발자의 선호도와 프로젝트 요구 사항에 따라 다를 수 있다.
