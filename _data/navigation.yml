@@ -19,7 +19,7 @@ sidebar-category:
       - title: "- Spring"
         url: "/spring"
         category: "spring"
-      - title: "- React"
+      - title: "- Web"
         url: "/web"
         category: "web"
       - title: "- DB"
