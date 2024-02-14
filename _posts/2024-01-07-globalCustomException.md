@@ -1,7 +1,7 @@
 ---
 title: "[Spring] Global Custom Exception 적용 "
 categories:
-  - spring
+  - server
 ---
 
 ## 개발 환경
@@ -87,8 +87,8 @@ public class MemberErrorHandler {
 //status: 400Bad Request
 
 {
-    "errorCode": "MEMBER_002",
-    "errorDescription": "이미 존재하는 회원입니다."
+  "errorCode": "MEMBER_002",
+  "errorDescription": "이미 존재하는 회원입니다."
 }
 ```
 
@@ -215,7 +215,7 @@ public class MemberService {
 
 ```json
 {
-    "errorCode": "MEMBER_002",
-    "errorDescription": "이미 존재하는 회원입니다."
+  "errorCode": "MEMBER_002",
+  "errorDescription": "이미 존재하는 회원입니다."
 }
 ```

@@ -1,10 +1,11 @@
 ---
 title: "[Spring Security] CSR server에 JWT 도입하기"
 categories:
-    - spring
+  - server
 ---
 
 ### 개발 환경
+
 ---
 
 - Java 11
@@ -15,6 +16,7 @@ categories:
 <br>
 
 ### 기본적인 JWT 생성 흐름
+
 ---
 
 1. 클라이언트가 서버 측에 로그인 정보(ex: `username`, `password`)로 인증 요청을 보낸다.
@@ -28,6 +30,7 @@ categories:
 <br>
 
 ### AccessToken 및 RefreshToken 발급 과정
+
 ---
 
 ```java
@@ -77,6 +80,7 @@ ResponseCookie rtkCookie = ResponseCookie.from("rtk", tokens.getRefreshToken().g
 <br>
 
 ### AccessToken 재발급 과정
+
 ---
 
 ```java

@@ -1,10 +1,10 @@
 ---
 title: "[JPA] No default constructor for entity"
 categories:
-    - spring
+  - server
 ---
 
-JPA를 처음 사용할 때 만났던 에러이다. 
+JPA를 처음 사용할 때 만났던 에러이다.
 
 Entity 클래스에 기본 생성자를 만들어주지 않으면 발생한다.
 
@@ -13,7 +13,9 @@ Entity 클래스에 기본 생성자를 만들어주지 않으면 발생한다.
 <br>
 
 ### 왜 기본 생성자를 만들어줘야 할까?
+
 ---
+
 <br>
 우선 JPA는 Entity 클래스를 통해 DB와 매핑한다.
 
@@ -28,7 +30,9 @@ Reflaction은 클래스 이름만으로 생성자, 필드, 메서드 등 접근�
 <br>
 
 ### Reflection을 사용하는 이유
+
 ---
+
 <br>
 Entity를 생성할 때 Reflection을 사용하는 이유는 `Entity`가 어떤 타입인지 JPA는 알 수 없기 때문이다.
 
@@ -37,6 +41,7 @@ Entity를 생성할 때 Reflection을 사용하는 이유는 `Entity`가 어떤 
 <br>
 
 ### 결론
+
 ---
 
 JPA를 사용할 때는 Entity에 기본 생성자를 만들어 주자.

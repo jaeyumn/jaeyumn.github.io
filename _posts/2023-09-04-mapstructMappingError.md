@@ -1,13 +1,14 @@
 ---
 title: "[Spring] Mapstruct 클래스타입 변환 / N:M 관계 매핑 에러"
 categories:
-    - spring
-    - error
+  - server
+  - error
 ---
 
 Mapstruct는 Builder를 통해 손수 객체 간 변환을 할 필요 없이 간단하게 변환을 적용해 주는 라이브러리이다.
 
 ### 문제 발생
+
 ---
 
 평소 코드를 작성하면서 Dto 와 Entity 간에 변환이 필요할 때면 mapstruct를 이용해서 작업을 진행했고 이번에도 mapstrurct를 통해 매핑을 하는데 에러가 발생했다.
@@ -20,6 +21,7 @@ public static class Post {
     private List<ProjectDto.Add> projects;
 }
 ```
+
 <br>
 
 ProjectDto.Add 또한 내부에 클래스 타입의 List를 가지고 있다.
@@ -36,8 +38,8 @@ public static class Add {
 <br>
 
 ### 해결 과정
----
 
+---
 
 구글링을 통해 해결 방법을 찾아보고 GPT 형님의 도움도 받아봤지만 해결이 되지 않아서 Builder를 통해 손수 변환을 해야 하나.. 고민하던 찰나 '이런 문제가 생기면 mapstruct를 사용하는 모두가 손수 변환을 해주는 건가? mapstruct를 활용해서 해결할 수 있는 방법이 있지 않을까?'라는 생각이 들어 새로운 방향으로 접근해 보고 해결 방법을 알게 되었다.
 
@@ -59,6 +61,7 @@ public interface CvMapper {
 <br>
 
 아래는 활용된 mapper 중 하나이다.
+
 ```java
 @Mapper(componentModel = "spring")
 public interface CustomSectionMapper {
@@ -76,8 +79,8 @@ public interface CustomSectionMapper {
 <br>
 
 ### 다중으로 연관된 엔티티에서 추가 문제 발생
----
 
+---
 
 하나의 에러를 해결하니까 이번엔 또 다른 문제가 발생했다.
 
@@ -92,7 +95,7 @@ Cv 엔티티와 SkillStack 엔티티는 N:M 관계에 있다. 그래서 중간�
 CvSkillStack cvSkillStackAddToCvSkillStack(CvSkillStackAddDto cvSkillStackAdd);
 ```
 
-위 애너테이션을 보면 source와 target으로 skillStackId를 명시하고 있다. source는 매핑의 원본 필드를 지정하고, target은 매핑의 대상 필드를 지정하는 것이다. 
+위 애너테이션을 보면 source와 target으로 skillStackId를 명시하고 있다. source는 매핑의 원본 필드를 지정하고, target은 매핑의 대상 필드를 지정하는 것이다.
 
 이렇게 설정하면 CvSkillStackAddDto 객체의 skillStackId 필드 값을 CvSkillStack 객체의 skillStack.skillStackId 필드에 매핑하게 된다.
 

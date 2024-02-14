@@ -1,7 +1,7 @@
 ---
 title: "[Spring Security] JWT + Redis 서버 도입"
 categories:
-  - spring
+  - server
 ---
 
 ## 개발 환경

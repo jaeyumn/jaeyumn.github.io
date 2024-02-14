@@ -1,7 +1,7 @@
 ---
 title: "[Spring] PRG(Post-Redirect-Get) 패턴"
 categories:
-    - spring
+  - server
 ---
 
 `PRG(Post-Redirect-Get)` 패턴은 웹 애플리케이션에서 사용되는 디자인 패턴 중 하나로, 중복 데이터 제출 문제와 사용자 경험을 향상시키기 위한 패턴이다.
@@ -9,7 +9,8 @@ categories:
 <br>
 
 ### 언제 사용할까?
---- 
+
+---
 
 예시로 사용자가 어떤 제품을 구매하는 요청을 보냈다고 가정한다.
 
@@ -28,9 +29,11 @@ PRG(Post-Redirect-Get), 말 그대로 `POST` 요청 후 비즈니스 로직을 �
 <br>
 
 ### 구현 예시
+
 ---
 
 - PRG 패턴을 적용하기 전 코드
+
 ```java
 @Controller
 public class TestController {
@@ -44,7 +47,7 @@ public class TestController {
   }
 
   /**
-   * 주문 
+   * 주문
    */
   @PostMapping("/order")
   public String order() {
@@ -54,6 +57,7 @@ public class TestController {
 ```
 
 - PRG 패턴을 적용한 코드
+
 ```java
 @Controller
 public class TestController {
@@ -67,7 +71,7 @@ public class TestController {
   }
 
   /**
-   * 주문 처리 후 /result로 redirect 
+   * 주문 처리 후 /result로 redirect
    */
   @PostMapping("/order")
   public String order() {
@@ -76,7 +80,7 @@ public class TestController {
 
   /**
    * 주문 완료 페이지 호출
-   */ 
+   */
   @GetMapping("/result")
   public String orderResultForm() {
     return "order-detail";

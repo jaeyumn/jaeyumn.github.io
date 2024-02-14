@@ -1,10 +1,11 @@
 ---
 title: "[JPA] SpringBoot 2.7 버전 QueryDSL 설정"
 categories:
-    - spring
+  - server
 ---
 
 ### 개발 환경
+
 ---
 
 - intelliJ
@@ -15,6 +16,7 @@ categories:
 <br>
 
 ### build.gradle
+
 ---
 
 ```gradle
@@ -92,9 +94,11 @@ configurations {
 <br>
 
 ### **여기서 주의할 점**
+
 ---
 
 쌍따옴표로 감싸진 부분은 변수를 사용해야 하기 때문에 쌍따옴표 그대로 작성해야 한다. 만약 다음과 같이 작성하면 아래 처럼 Build에 실패함.
+
 ```gradle
 // queryDsl
 	implementation 'com.querydsl:querydsl-jpa:${queryDslVersion}'
@@ -137,7 +141,7 @@ Execution failed for task ':compileQuerydsl'.
 > Run with --scan to get full insights.
 > Get more help at https://help.gradle.org.
 
-Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.   
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
 
 You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
 
@@ -164,28 +168,32 @@ BUILD SUCCESSFUL in 4s
 4 actionable tasks: 4 executed
 ```
 
-
 <br>
 
 ### 정리
+
 ---
 
-- QueryDSL 라이브러리  
+- QueryDSL 라이브러리
+
 ```gradle
 implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
 ```
 
 - QueryDSL 관련 코드 생성
+
 ```gradle
 annotationProcessor "com.querydsl:querydsl-apt:${queryDslVersion}"
 ```
 
 - QueryDSL 생성된 클래스 파일을 저장할 디렉토리 경로 설정
+
 ```gradle
 def querydslDir = "$buildDir/generated/querydsl"
 ```
 
 - QueryDSL 플러그인을 구성하는 블록
+
 ```gradle
 querydsl {
 	jpa = true  // JPA 엔티티 클래스를 기반으로 QueryDSL 클래스 생성
@@ -194,6 +202,7 @@ querydsl {
 ```
 
 - QueryDSL이 생성한 클래스 파일들을 프로젝트의 소스 세트에 추가하여 컴파일할 수 있도록 지정
+
 ```gradle
 sourceSets {
 	main.java.srcDir querydslDir
@@ -201,6 +210,7 @@ sourceSets {
 ```
 
 - QueryDSL 컴파일 작업을 구성하는 블록
+
 ```gradle
 compileQuerydsl {
 	options.annotationProcessorPath = configurations.querydsl
@@ -208,6 +218,7 @@ compileQuerydsl {
 ```
 
 - Gradle의 configurations를 구성하는 블록
+
 ```gradle
 configurations {
 	compileOnly {

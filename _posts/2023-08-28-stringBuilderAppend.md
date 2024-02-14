@@ -1,13 +1,14 @@
 ---
 title: "[Java] String concatenation as argument to 'StringBuilder.append()' call"
 categories:
-    - java
+  - server
 ---
 
 ```java
 StringBuilder sb = new StringBuilder();
 sb.append(index + "\n");
 ```
+
 인텔리제이로 알고리즘 문제를 풀던 도중 index 라는 변수를 줄 별로 출력하기 위해 다음과 같이 코드를 작성하니까 `append`에 노란 밑줄이 생겼다.
 
 <br/>
@@ -39,6 +40,7 @@ sb.append(index).append("\n");
 <br/>
 
 ### 추가로 궁금했던 부분
+
 ---
 
 `sb.append(index + "\n")` 을 작성했을 때는 교체를 권장하는 문구가 떴지만 `sb.append(index + '\n')` 으로 교체해보니까 아무런 문구가 뜨지 않았다.
@@ -52,6 +54,7 @@ sb.append(index).append("\n");
 <br/>
 
 ### 궁금했던 부분 해결!
+
 ---
 
 아주 간단한 이유였다. 여러 실험을 하던 도중 진짜 생각지도 못한 곳에서 이유를 찾게 되었다.

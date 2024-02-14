@@ -1,8 +1,7 @@
 ---
 title: "[Java] 데이터는 Map과 DTO 어디에 담는 것이 좋을까"
 categories:
-  - java
-  - spring
+  - server
 ---
 
 데이터를 가공하고 전달하는 과정에서 어떤 분은 `Map`을 사용하고, 어떤 분은 `DTO(Data Transfer Object)`와 같이 데이터를 담을 클래스를 만들어 사용하는 것을 볼 수 있다.

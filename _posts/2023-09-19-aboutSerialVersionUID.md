@@ -1,7 +1,7 @@
 ---
 title: "[Java] serialVersionUID 에 대해"
 categories:
-    - java
+  - server
 ---
 
 Java에서 `serialVersionUID`는 직렬화(serialization)와 관련된 필드이다.
@@ -17,6 +17,7 @@ Java에서 `serialVersionUID`는 직렬화(serialization)와 관련된 필드이
 <br>
 
 ### serialVersionUID의 목적
+
 ---
 
 `serialVersionUID`는 직렬화된 객체의 버전 번호를 나타낸다.
@@ -28,6 +29,7 @@ Java에서 `serialVersionUID`는 직렬화(serialization)와 관련된 필드이
 <br>
 
 ### 생성 방법
+
 ---
 
 `serialVersionUID`는 클래스에 직접 선언될 수도 있고, 선언되지 않았을 경우 자동으로 생성된다.
@@ -47,17 +49,19 @@ private static final long serialVersionUID = 123456789L;
 <br>
 
 ### 언제 serialVersionUID를 사용하면 될까?
+
 ---
 
 1. 클래스 버전을 관리할 때
-: 클래스의 구조가 변경되는 경우에도 역직렬화를 가능하게 하려면, `serialVersionUID`를 명시적으로 선언해서 버전 관리를 해야 한다.
+   : 클래스의 구조가 변경되는 경우에도 역직렬화를 가능하게 하려면, `serialVersionUID`를 명시적으로 선언해서 버전 관리를 해야 한다.
 
 2. 호환성 유지
-: 직렬화된 객체를 다른 시스템으로 전송하거나 파일에 저장한 후, 나중에 해당 객체를 역직렬화해야 할 때, `serialVersionUID`가 같다면 호환성을 유지해서 정상적으로 역직렬화를 할 수 있다.
+   : 직렬화된 객체를 다른 시스템으로 전송하거나 파일에 저장한 후, 나중에 해당 객체를 역직렬화해야 할 때, `serialVersionUID`가 같다면 호환성을 유지해서 정상적으로 역직렬화를 할 수 있다.
 
 <br>
 
 ### 주의해야 할 점
+
 ---
 
 - `serialVersionUID`를 명시적으로 선언할 때는 개발자가 수동으로 값을 관리해야 한다. 예를 들어, 클래스 구조가 변경되면 해당 값을 업데이트 해줘야 한다.
