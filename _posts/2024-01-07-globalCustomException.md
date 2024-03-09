@@ -1,7 +1,7 @@
 ---
 title: "[Spring] Global Custom Exception 적용 "
 categories:
-  - server
+  - develop
 ---
 
 ## 개발 환경

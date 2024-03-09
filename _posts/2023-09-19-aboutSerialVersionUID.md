@@ -1,7 +1,7 @@
 ---
 title: "[Java] serialVersionUID 에 대해"
 categories:
-  - server
+  - study
 ---
 
 Java에서 `serialVersionUID`는 직렬화(serialization)와 관련된 필드이다.

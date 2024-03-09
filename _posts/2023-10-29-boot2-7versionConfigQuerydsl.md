@@ -1,7 +1,7 @@
 ---
 title: "[JPA] SpringBoot 2.7 버전 QueryDSL 설정"
 categories:
-  - server
+  - develop
 ---
 
 ### 개발 환경

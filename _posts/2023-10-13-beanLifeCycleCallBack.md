@@ -1,7 +1,7 @@
 ---
 title: "[Spring] Bean 생명주기 콜백"
 categories:
-  - server
+  - study
 ---
 
 스프링 프레임워크는 객체의 생성과 소멸 시점을 관리하고 제어할 수 있는 `Bean 생명주기` 기능을 제공한다.

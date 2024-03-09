@@ -1,8 +1,7 @@
 ---
 title: "[Spring] Mapstruct 클래스타입 변환 / N:M 관계 매핑 에러"
 categories:
-  - server
-  - error
+  - trouble
 ---
 
 Mapstruct는 Builder를 통해 손수 객체 간 변환을 할 필요 없이 간단하게 변환을 적용해 주는 라이브러리이다.

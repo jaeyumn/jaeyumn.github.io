@@ -1,7 +1,7 @@
 ---
 title: "[Spring] PRG(Post-Redirect-Get) 패턴"
 categories:
-  - server
+  - study
 ---
 
 `PRG(Post-Redirect-Get)` 패턴은 웹 애플리케이션에서 사용되는 디자인 패턴 중 하나로, 중복 데이터 제출 문제와 사용자 경험을 향상시키기 위한 패턴이다.

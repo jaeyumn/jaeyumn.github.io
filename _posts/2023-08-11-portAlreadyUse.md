@@ -1,7 +1,7 @@
 ---
 title: "Port 8080 was already in use"
 categories:
-    - error
+  - trouble
 ---
 
 작업을 하다가 인텔리제이가 갑자기 닫혀버리거나 서버를 종료하지 못한 경우에 다시 서버를 실행시키면 에러가 발생한다.
@@ -23,6 +23,7 @@ Action: Identify and stop the process that's listening on port 8080 or configure
 <br>
 
 ### 해결 방법 (Windows OS)
+
 ---
 
 1. 관리자 권한으로 `cmd` 실행<br>
@@ -37,7 +38,7 @@ Action: Identify and stop the process that's listening on port 8080 or configure
 > netstat -p tcp -ano
 
 프로토콜    로컬 주소        외부 주소      상태          PID
-TCP       0.0.0.0.:8080    0.0.0.0:0    LISTENING      16068  
+TCP       0.0.0.0.:8080    0.0.0.0:0    LISTENING      16068
 ```
 
 ```
@@ -49,7 +50,9 @@ TCP       0.0.0.0.:8080    0.0.0.0:0    LISTENING      16068
 <br>
 
 ### 추가
+
 ---
+
 EC2 환경에서 백그라운드로 서버를 실행시켰을 때 종료 방법 (bash)
 
 1. 프로세스 id 확인: `sudo lsof -t -i:[포트 번호]`

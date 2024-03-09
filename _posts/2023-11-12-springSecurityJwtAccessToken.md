@@ -1,7 +1,7 @@
 ---
 title: "[Spring Security] CSR server에 JWT 도입하기"
 categories:
-  - server
+  - develop
 ---
 
 ### 개발 환경

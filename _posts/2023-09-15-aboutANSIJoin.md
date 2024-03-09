@@ -1,7 +1,7 @@
 ---
 title: "[SQL] ANSI Join 에 대해"
 categories:
-  - server
+  - study
 ---
 
 SQL 문법을 공부하던 도중, 대부분의 문법은 비슷하지만 MySQL과 Oracle에서 사용되는 구문에서 조금 차이가 있다는 점을 알게 되었다.

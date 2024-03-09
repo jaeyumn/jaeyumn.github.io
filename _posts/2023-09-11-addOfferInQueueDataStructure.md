@@ -1,7 +1,7 @@
 ---
 title: "[Java] Queue 자료구조에서 add와 offer의 차이"
 categories:
-  - server
+  - study
 ---
 
 Java에서 Queue 인터페이스를 사용하는 도중 add와 offer는 같은 동작을 하는 것 같은데, 왜 분리되어 있는 걸까? 라는 생각이 들었다.

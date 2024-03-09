@@ -1,7 +1,7 @@
 ---
 title: "[JPA] No default constructor for entity"
 categories:
-  - server
+  - trouble
 ---
 
 JPA를 처음 사용할 때 만났던 에러이다.

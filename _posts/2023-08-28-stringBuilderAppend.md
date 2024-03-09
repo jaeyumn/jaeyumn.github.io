@@ -1,7 +1,7 @@
 ---
 title: "[Java] String concatenation as argument to 'StringBuilder.append()' call"
 categories:
-  - server
+  - study
 ---
 
 ```java
