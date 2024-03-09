@@ -1,7 +1,7 @@
 ---
-title: "Trouble"
+title: "Trouble Shooting"
 layout: archive
-permalink: /trouble
+permalink: /trouble-shooting
 author_profile: true
 sidebar:
   nav: "sidebar-category"
