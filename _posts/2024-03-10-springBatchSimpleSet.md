@@ -55,8 +55,12 @@ public class BatchConfig extends DefaultBatchConfiguration {
 2024-03-10T20:00:40.450+09:00  INFO 1888 --- [           main] com.example.BatchConfig          : Execute MyStep
 ```
 
+<br>
+
 ---
 
-참고
+<br>
+
+아래 공식 문서를 참고했습니다.
 
 - [Spring Batch Documentation / Configuring and Running a Job / Java Configuration](https://docs.spring.io/spring-batch/reference/job/java-config.html)
