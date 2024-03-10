@@ -38,6 +38,17 @@ services:
 
 <br>
 
+```yml
+command:
+  - --character-set-server=utf8mb4
+  - --collation-server=utf8mb4_unicode_ci
+  - --skip-character-set-client-handshake
+```
+
+- 한글 깨짐 현상이 발생하여 위 옵션을 추가해줬습니다.
+
+<br>
+
 ### .env
 
 ```
