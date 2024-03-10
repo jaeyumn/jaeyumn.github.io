@@ -13,12 +13,12 @@ categories:
 ### docker-compose.yml
 
 ```yml
-version: "3"
+version: "3.8"
 
 services:
   playground-db:
     container_name: playground-db ## 컨테이너 이름
-    image: mysql ## 사용할 Docker 이미지
+    image: mysql:8.2.0 ## 사용할 Docker 이미지
     ports:
       - "3306:3306" ## 포트 번호
     volumes:
